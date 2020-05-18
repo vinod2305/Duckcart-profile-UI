@@ -89,7 +89,8 @@ export default {
         update: "2MIN AGO",
         date: "02/05/2020",
         active: true
-      }
+      },
+     
     ],
     twoLine: true,
     nav: true,

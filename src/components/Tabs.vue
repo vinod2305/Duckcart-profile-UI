@@ -1,12 +1,12 @@
 <template>
   <v-card outlined class="tab-box">
     <v-tabs v-model="tab">
-      <v-tab v-for="item in items" :key="item.tab">{{ item.tab }}</v-tab>
+      <v-tab v-for="item in items" active-class="v-window-item--active" :key="item.tab">{{ item.tab }}</v-tab>
     </v-tabs>
     <v-tabs-items v-model="tab">
-      <v-tab-item v-for="item in items" :key="item.tab">
-        <v-card flat >
-          <v-card-text class="pa-0">
+      <v-tab-item v-for="item in items"  :key="item.tab">
+        <v-card  class="scroll" :height="`${windowHeight}`">
+          <v-card-text class="mr-2">
             <component  v-bind:is="item.content"></component>
           </v-card-text>
         </v-card>
@@ -28,9 +28,15 @@ export default {
     Assessments,
     Files,
     Resume
+  }, 
+  mounted() {
+    this.windowHeight = window.innerHeight - (0.4*window.innerHeight) ;
+    
   },
+  
   data: () => ({
-    tab: null,
+    tab: 'activities',
+    windowHeight: 0,
     items: [
       { tab: "overview", content: "Overview" },
       { tab: "activities", content: "Activities" },
@@ -46,4 +52,7 @@ export default {
 .tab-box {
   border: none !important;
 }
+.scroll {
+      overflow-y: auto;
+    }
 </style>
