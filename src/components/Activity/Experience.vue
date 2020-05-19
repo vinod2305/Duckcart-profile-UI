@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined class="ma-0">
+  <v-card outlined class="ma-0 rounded-card">
     <v-subheader>
       <span class="text--primary subtitle-1">Experience</span>
       <v-spacer></v-spacer>
@@ -10,7 +10,7 @@
     <v-list flat class="pa-0">
       <v-list-item-group>
         <v-list-item v-for="(item, i) in items" :key="i">
-          <v-list-item-content>
+          <v-list-item-content class="pt-0 pb-5">
             <v-list-item-title>{{item.role}}</v-list-item-title>
             <v-list-item-subtitle>
               <p class="ma-0">{{item.company}}</p>
@@ -38,3 +38,8 @@ export default {
   })
 };
 </script>
+<style lang="scss" scoped>
+.rounded-card{
+    border-radius:8px !important;
+}
+</style>

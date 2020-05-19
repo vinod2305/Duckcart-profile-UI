@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined class="ma-0">
+  <v-card outlined class="ma-0 rounded-card">
     <v-subheader>
       <span class="text--primary subtitle-1">Information</span>
       <v-spacer></v-spacer>
@@ -11,7 +11,7 @@
     <v-container class="py-1">
       <v-row>
         <v-col :cols="1">
-          <span>EMAIL</span>
+          <span >EMAIL</span>
         </v-col>
         <v-col>
           <span class="value">{{items.email}}</span>
@@ -68,5 +68,8 @@ export default {
 <style lang="scss" scoped>
 .value {
   color: #5f6368;
+}
+.rounded-card{
+    border-radius:8px !important;
 }
 </style>

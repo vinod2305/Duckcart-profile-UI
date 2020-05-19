@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined class="ma-2">
+  <v-card outlined class="ma-2 rounded-card">
     <v-list-item class="py-1">
       <span>Evaluation</span>
       <v-spacer></v-spacer>
@@ -60,5 +60,8 @@ export default {
 <style lang="scss" scoped>
 .v-card {
   border-radius: 10px;
+}
+.rounded-card{
+    border-radius:8px !important;
 }
 </style>

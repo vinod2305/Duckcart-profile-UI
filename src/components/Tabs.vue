@@ -1,11 +1,11 @@
 <template>
   <v-card outlined class="tab-box">
-    <v-tabs v-model="tab">
-      <v-tab v-for="item in items" active-class="v-window-item--active" :key="item.tab">{{ item.tab }}</v-tab>
+    <v-tabs v-model="tab" class="ml-4">
+      <v-tab v-for="item in items"  active-class="v-window-item--active" :key="item.tab">{{ item.tab }}</v-tab>
     </v-tabs>
     <v-tabs-items v-model="tab">
       <v-tab-item v-for="item in items"  :key="item.tab">
-        <v-card  class="scroll" :height="`${windowHeight}`">
+        <v-card flat class="scroll" :height="`${windowHeight}`">
           <v-card-text class="mr-2">
             <component  v-bind:is="item.content"></component>
           </v-card-text>

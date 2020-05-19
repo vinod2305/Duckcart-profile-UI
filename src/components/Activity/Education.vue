@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined class="ma-0" height="100%">
+  <v-card outlined class="ma-0 rounded-card" height="100%">
     <v-subheader>
       <span class="text--primary subtitle-1">Education</span>
       <v-spacer></v-spacer>
@@ -43,3 +43,8 @@ export default {
   })
 };
 </script>
+<style lang="scss" scoped>
+.rounded-card{
+    border-radius:8px !important;
+}
+</style>

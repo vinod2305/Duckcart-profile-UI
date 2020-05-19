@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined class="ma-2 my-3">
+  <v-card outlined class="ma-2 my-3 rounded-card">
     <v-list :two-line="twoLine" :nav="nav" :avatar="avatar" class="pa-0">
       <v-subheader>
         <span class="text--primary subtitle-1">Team Notes</span>
@@ -17,9 +17,9 @@
             <v-list-item-title class="my-1">
               <span>{{item.title}}</span>
               •
-              <span class="text--secondary caption">{{item.time}}</span>
+              <span class="caption font-weight-medium text--disabled">{{item.time}}</span>
             </v-list-item-title>
-            <v-list-item-subtitle v-html="item.subtitle" class="mt-1 mb-3"></v-list-item-subtitle>
+            <v-list-item-subtitle v-html="item.subtitle" class="mt-1 mb-3 text--secondary"></v-list-item-subtitle>
 
             <v-divider v-show="i < '3'"></v-divider>
           </v-list-item-content>
@@ -41,22 +41,22 @@ export default {
       {
         title: "Kamal Pratap",
         time: "02:30 pm",
-        subtitle: "Hey Guys, i've pushed my progress to the Master Branch"
+        subtitle: "Hey Guys, I've pushed my progress to the Master Branch"
       },
       {
         title: "Kamal Pratap",
         time: "02:30 pm",
-        subtitle: "Hey Guys, i've pushed my progress to the Master Branch"
+        subtitle: "Hey Guys, I've pushed my progress to the Master Branch"
       },
       {
         title: "Kamal Pratap",
         time: "02:30 pm",
-        subtitle: "Hey Guys, i've pushed my progress to the Master Branch"
+        subtitle: "Hey Guys, I've pushed my progress to the Master Branch"
       },
       {
         title: "Kamal Pratap",
         time: "02:30 pm",
-        subtitle: "Hey Guys, i've pushed my progress to the Master Branch"
+        subtitle: "Hey Guys, I've pushed my progress to the Master Branch"
       }
     ],
     twoLine: true,
@@ -66,3 +66,8 @@ export default {
   })
 };
 </script>
+<style lang="scss" scoped>
+.rounded-card{
+    border-radius:8px !important;
+}
+</style>

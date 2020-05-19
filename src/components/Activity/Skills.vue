@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined class="ma-0" height="100%">
+  <v-card outlined class="ma-0 rounded-card" height="100%">
     <v-list flat>    
     <v-subheader>
         <span class="text--primary subtitle-1">Skils</span>
@@ -8,7 +8,7 @@
           <v-icon>add_circle_outline</v-icon>
         </v-btn>
       </v-subheader>
-    <v-list-item>
+    <v-list-item class="ml-5">
       <v-chip-group column>
         <v-chip 
           color="#E3F2FD"
@@ -47,4 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.rounded-card{
+    border-radius:8px !important;
+}
 </style>

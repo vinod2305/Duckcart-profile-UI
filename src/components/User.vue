@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="ml-6">
     <v-row>
       <v-avatar class="mt-2" color="grey" size="130">
         <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"></v-img>

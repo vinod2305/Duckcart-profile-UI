@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined class="ma-2 my-3">
+  <v-card outlined class="ma-2 my-3 rounded-card">
     <v-list flat :two-line="twoLine" :nav="nav" :avatar="avatar" class="pa-0">
       <v-subheader>
         <span class="text--primary subtitle-1">Tasks</span>
@@ -8,7 +8,7 @@
           <v-icon>add_circle_outline</v-icon>
         </v-btn>
       </v-subheader>
-      <v-list-item-group v-model="item">
+      <v-list-item-group v-model="item" >
         <div v-for="(item, i) in items" :key="i">
           <v-list-item flat inactive class="ma-0">
             <v-list-item-content class="pa-1">
@@ -18,10 +18,10 @@
                 </v-list-item-action>
                 <span>{{item.title}}</span>
               </v-list-item-title>
-              <v-list-item-subtitle class="mb-3 ml-1 font-weight-medium">
+              <v-list-item-subtitle class="mb-3 ml-1 caption font-weight-medium text--disabled">
                 <span>{{item.update}} </span>•
                 <v-icon class="calendar-today">calendar_today</v-icon>
-                <span >DUE : </span>
+                <span > DUE : </span>
                 <span>{{item.time}} </span>
                 <span>{{item.date}}</span>
               </v-list-item-subtitle>
@@ -33,7 +33,7 @@
               </v-avatar>
             </v-list-item-action>
           </v-list-item>
-          <v-divider></v-divider>
+          <v-divider inline></v-divider>
         </div>
       </v-list-item-group>
     </v-list>
@@ -104,5 +104,8 @@ export default {
 .calendar-today {
   font-size: 14px;
   transform: translateY(-2px);
+}
+.rounded-card{
+    border-radius:8px !important;
 }
 </style>
