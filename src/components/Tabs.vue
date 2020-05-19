@@ -30,7 +30,7 @@ export default {
     Resume
   }, 
   mounted() {
-    this.windowHeight = window.innerHeight - (0.4*window.innerHeight) ;
+    this.windowHeight = window.innerHeight - (0.3*window.innerHeight) ;
     
   },
   
